@@ -1,6 +1,5 @@
 package logic;
 
-import com.sun.tools.javac.Main;
 import model.CanFrame;
 
 import java.util.BitSet;

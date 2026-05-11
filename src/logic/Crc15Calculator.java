@@ -33,13 +33,13 @@ public class Crc15Calculator {
             crc &= CRC_MASK;
         }
 
-        return convertIntToBitSet(crc, 15); // stale ustalowa wartość 15, bo działamy na CRC-15
+        return convertIntToBitSet(crc); // stale ustalowa wartość 15, bo działamy na CRC-15
     }
 
     // Funkcja pomocnicza - zamieniająca liczbę int na BitSet, drugi argument to ilość liczb, która ta liczba ma w systemie binarnym
-    private BitSet convertIntToBitSet(int value, int length) {
-        BitSet result = new BitSet(length);
-        for (int i = 0; i < length; i++) {
+    private BitSet convertIntToBitSet(int value) {
+        BitSet result = new BitSet(15);
+        for (int i = 0; i < 15; i++) {
             if (((value >> i) & 1) == 1) {
                 result.set(i);
             }
